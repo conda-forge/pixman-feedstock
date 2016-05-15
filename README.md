@@ -5,7 +5,7 @@ Home: http://cgit.freedesktop.org/pixman/
 
 Package license: MIT
 
-Feedstock license: BSD
+Feedstock license: BSD 3-Clause
 
 Summary: A low-level software library for pixel manipulation
 
@@ -69,9 +69,15 @@ Terminology
 
 Current build status
 ====================
+
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pixman-feedstock.svg?style=svg)](https://circleci.com/gh/conda-forge/pixman-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pixman-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pixman-feedstock) 
 Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pixman-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pixman-feedstock/branch/master)
+
+Current release info
+====================
+Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pixman/badges/version.svg)](https://anaconda.org/conda-forge/pixman)
+Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pixman/badges/downloads.svg)](https://anaconda.org/conda-forge/pixman)
 
 
 Updating pixman-feedstock
