@@ -2,7 +2,7 @@
 
 OPTS=""
 if [[ $(uname) == Darwin ]]; then
-OPTS="--disable-openmp"
+  OPTS="--disable-openmp"
 fi
 
 ./configure --prefix=$PREFIX $OPTS
