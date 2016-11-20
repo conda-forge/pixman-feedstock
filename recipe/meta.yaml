@@ -22,7 +22,6 @@ requirements:
   build:
     - python  # [win]
     - posix  # [win]
-    - m2w64-binutils  # [win]
     - pkg-config  # [not win]
     - vc 9  # [win and py27]
     - vc 10  # [win and py34]
