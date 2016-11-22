@@ -1,14 +1,16 @@
 About pixman
 ============
 
-Home: http://cgit.freedesktop.org/pixman/
+Home: http://www.pixman.org/
 
 Package license: MIT
 
 Feedstock license: BSD 3-Clause
 
-Summary: A low-level software library for pixel manipulation
+Summary: A low-level software library for pixel manipulation.
 
+Pixman is a low-level software library for pixel manipulation, providing
+features such as image compositing and trapezoid rasterization.
 
 
 Installing pixman
@@ -72,7 +74,7 @@ Current build status
 
 Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pixman-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pixman-feedstock)
 OSX: [![TravisCI](https://travis-ci.org/conda-forge/pixman-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pixman-feedstock)
-Windows: ![](https://cdn.rawgit.com/conda-forge/conda-smithy/90845bba35bec53edac7a16638aa4d77217a3713/conda_smithy/static/disabled.svg)
+Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pixman-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pixman-feedstock/branch/master)
 
 Current release info
 ====================
