@@ -5,6 +5,8 @@ if [[ $(uname) == Darwin ]]; then
   OPTS="--disable-openmp"
 fi
 
+export CFLAGS="-fPIC ${CFLAGS}"
+
 ./configure --prefix=$PREFIX $OPTS
 
 make -j$CPU_COUNT
