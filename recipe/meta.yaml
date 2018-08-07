@@ -11,22 +11,15 @@ source:
     - no_test.patch  # [win]
 
 build:
-  number: 2
-  skip: True  # [win and py36]
-  features:
-    - vc9  # [win and py27]
-    - vc14  # [win and (py35 or py36)]
+  number: 3
 
 requirements:
   build:
-    - python  # [win]
     - posix  # [win]
     - pkg-config  # [not win]
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
+    - {{ compiler('c') }}
+  host:
   run:
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
 
 test:
   commands:
