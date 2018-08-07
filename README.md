@@ -16,14 +16,16 @@ features such as image compositing and trapezoid rasterization.
 Current build status
 ====================
 
-Linux: [![Circle CI](https://circleci.com/gh/conda-forge/pixman-feedstock.svg?style=shield)](https://circleci.com/gh/conda-forge/pixman-feedstock)
-OSX: [![TravisCI](https://travis-ci.org/conda-forge/pixman-feedstock.svg?branch=master)](https://travis-ci.org/conda-forge/pixman-feedstock)
-Windows: [![AppVeyor](https://ci.appveyor.com/api/projects/status/github/conda-forge/pixman-feedstock?svg=True)](https://ci.appveyor.com/project/conda-forge/pixman-feedstock/branch/master)
+[![Linux](https://img.shields.io/circleci/project/github/conda-forge/pixman-feedstock/master.svg?label=Linux)](https://circleci.com/gh/conda-forge/pixman-feedstock)
+[![OSX](https://img.shields.io/travis/conda-forge/pixman-feedstock/master.svg?label=macOS)](https://travis-ci.org/conda-forge/pixman-feedstock)
+[![Windows](https://img.shields.io/appveyor/ci/conda-forge/pixman-feedstock/master.svg?label=Windows)](https://ci.appveyor.com/project/conda-forge/pixman-feedstock/branch/master)
 
 Current release info
 ====================
-Version: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pixman/badges/version.svg)](https://anaconda.org/conda-forge/pixman)
-Downloads: [![Anaconda-Server Badge](https://anaconda.org/conda-forge/pixman/badges/downloads.svg)](https://anaconda.org/conda-forge/pixman)
+
+| Name | Downloads | Version | Platforms |
+| --- | --- | --- | --- |
+| [![Conda Recipe](https://img.shields.io/badge/recipe-pixman-green.svg)](https://anaconda.org/conda-forge/pixman) | [![Conda Downloads](https://img.shields.io/conda/dn/conda-forge/pixman.svg)](https://anaconda.org/conda-forge/pixman) | [![Conda Version](https://img.shields.io/conda/vn/conda-forge/pixman.svg)](https://anaconda.org/conda-forge/pixman) | [![Conda Platforms](https://img.shields.io/conda/pn/conda-forge/pixman.svg)](https://anaconda.org/conda-forge/pixman) |
 
 Installing pixman
 =================
