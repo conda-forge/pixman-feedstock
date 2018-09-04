@@ -11,28 +11,21 @@ source:
     - no_test.patch  # [win]
 
 build:
-  number: 2
-  skip: True  # [win and py36]
-  features:
-    - vc9  # [win and py27]
-    - vc14  # [win and (py35 or py36)]
+  number: 3
+  run_exports:
+    # excellent: add new symbols sometimes, none removed.
+    #    https://abi-laboratory.pro/tracker/timeline/pixman/
+    - {{ pin_subpackage('pixman') }}
 
 requirements:
   build:
-    - python  # [win]
     - posix  # [win]
     - pkg-config  # [not win]
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
-  run:
-    - vc 9  # [win and py27]
-    - vc 14  # [win and (py35 or py36)]
+    - {{ compiler('c') }}
 
 test:
   commands:
     - test -f ${PREFIX}/lib/libpixman-1.a  # [not win]
-    - conda inspect linkages -p $PREFIX $PKG_NAME  # [not win]
-    - conda inspect objects -p $PREFIX $PKG_NAME  # [osx]
 
 about:
   home: http://www.pixman.org/
