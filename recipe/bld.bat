@@ -1,5 +1,5 @@
 :: SSSE3 is returning errors when compiling with MSVC 9.
-if %PY_VER%==2.7 (
+if %VS_MAJOR%==9 (
     set SSSE3_FLAG=off
 ) else (
     set SSSE3_FLAG=on
