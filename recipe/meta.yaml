@@ -1,4 +1,4 @@
-{% set version = "0.34.0" %}
+{% set version = "0.38.0" %}
 
 package:
   name: pixman
