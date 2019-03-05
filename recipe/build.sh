@@ -15,7 +15,7 @@ export CFLAGS="-fPIC ${CFLAGS}"
             $OPTS
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
-make check
+make check || { cat test/test-suite.log; exit 1; }
 make install
 
 # We can remove this when we start using the new conda-build.
