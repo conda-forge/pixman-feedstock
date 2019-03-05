@@ -4,6 +4,9 @@ OPTS=""
 if [[ $(uname) == Darwin ]]; then
   OPTS="--disable-openmp"
 fi
+if [ "${target_platform}" == linux-ppc64le ]; then
+  OPTS="--disable-vmx "
+fi
 
 export CFLAGS="-fPIC ${CFLAGS}"
 
