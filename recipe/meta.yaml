@@ -1,4 +1,4 @@
-{% set version = "0.38.0" %}
+{% set version = "0.40.0" %}
 
 package:
   name: pixman
@@ -6,12 +6,12 @@ package:
 
 source:
   url: http://cairographics.org/releases/pixman-{{ version }}.tar.gz
-  sha256: a7592bef0156d7c27545487a52245669b00cf7e70054505381cff2136d890ca8
+  sha512: 063776e132f5d59a6d3f94497da41d6fc1c7dca0d269149c78247f0e0d7f520a25208d908cf5e421d1564889a91da44267b12d61c0bd7934cd54261729a7de5f
   patches:
     - no_test.patch  # [win]
 
 build:
-  number: 1003
+  number: 0
   run_exports:
     # excellent: add new symbols sometimes, none removed.
     #    https://abi-laboratory.pro/tracker/timeline/pixman/
