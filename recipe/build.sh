@@ -1,4 +1,6 @@
 #!/bin/bash
+# Get an updated config.sub and config.guess
+cp $BUILD_PREFIX/share/libtool/build-aux/config.* .
 
 OPTS=""
 if [[ $(uname) == Darwin ]]; then
@@ -15,7 +17,9 @@ export CFLAGS="-fPIC ${CFLAGS}"
             $OPTS
 
 make -j${CPU_COUNT} ${VERBOSE_AT}
+if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
 make check || { cat test/test-suite.log; exit 1; }
+fi
 make install
 
 # We can remove this when we start using the new conda-build.
