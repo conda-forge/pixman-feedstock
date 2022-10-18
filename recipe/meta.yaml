@@ -1,4 +1,4 @@
-{% set version = "0.40.0" %}
+{% set version = "0.42.0" %}
 
 package:
   name: pixman
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://cairographics.org/releases/pixman-{{ version }}.tar.gz
-  sha256: 6d200dec3740d9ec4ec8d1180e25779c00bc749f94278c8b9021f5534db223fc
+  sha256: 07f74c8d95e4a43eb2b08578b37f40b7937e6c5b48597b3a0bb2c13a53f46c13
   patches:
     - no_test.patch  # [win]
 
@@ -33,7 +33,7 @@ about:
   home: http://www.pixman.org/
   license: MIT
   license_file: COPYING
-  summary: 'A low-level software library for pixel manipulation.'
+  summary: A low-level software library for pixel manipulation.
   description: |
     Pixman is a low-level software library for pixel manipulation, providing
     features such as image compositing and trapezoid rasterization.
