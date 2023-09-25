@@ -1,29 +1,28 @@
 #!/bin/bash
-# Get an updated config.sub and config.guess
-cp $BUILD_PREFIX/share/libtool/build-aux/config.* .
 
-OPTS=""
+set -ex
+
+meson_config_args=()
+
 if [[ $(uname) == Darwin ]]; then
-  OPTS="--disable-openmp"
+  meson_config_args+=(-Dopenmp=disabled)
 fi
+
 if [ "${target_platform}" == linux-ppc64le ]; then
-  OPTS="--disable-vmx "
+  meson_config_args+=(-Dvmx=disabled)
 fi
+
 if [ "${target_platform}" == osx-arm64 ]; then
-  OPTS="$OPTS --disable-arm-a64-neon"
+  meson_config_args+=(-Da64-neon=disabled)
 fi
 
-export CFLAGS="-fPIC ${CFLAGS}"
-
-./configure --prefix=$PREFIX \
-            --host=${HOST} \
-            $OPTS
-
-make -j${CPU_COUNT} ${VERBOSE_AT}
-if [[ "${CONDA_BUILD_CROSS_COMPILATION}" != "1" ]]; then
-make check || { cat test/test-suite.log; exit 1; }
-fi
-make install
-
-# We can remove this when we start using the new conda-build.
-find $PREFIX -name '*.la' -delete
+meson setup builddir \
+    ${MESON_ARGS} \
+    "${meson_config_args[@]}" \
+    --buildtype=release \
+    --default-library=both \
+    --prefix=$PREFIX \
+    -Dlibdir=lib \
+    --wrap-mode=nofallback
+ninja -v -C builddir -j ${CPU_COUNT}
+ninja -C builddir install -j ${CPU_COUNT}
