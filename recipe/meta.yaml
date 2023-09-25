@@ -7,8 +7,6 @@ package:
 source:
   url: http://cairographics.org/releases/pixman-{{ version }}.tar.gz
   sha256: ea1480efada2fd948bc75366f7c349e1c96d3297d09a3fe62626e38e234a625e
-  patches:
-    - no_test.patch  # [win]
 
 build:
   number: 0
@@ -19,11 +17,11 @@ build:
 
 requirements:
   build:
-    - posix  # [win]
-    - pkg-config  # [not win]
-    - libtool  # [unix]
     - {{ compiler('c') }}
-    - make  # [unix]
+    - {{ compiler('cxx') }}
+    - meson
+    - ninja
+    - pkg-config
 
 test:
   commands:
