@@ -1,11 +1,11 @@
-About pixman
-============
+About pixman-feedstock
+======================
+
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pixman-feedstock/blob/main/LICENSE.txt)
 
 Home: http://www.pixman.org/
 
 Package license: MIT
-
-Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/pixman-feedstock/blob/main/LICENSE.txt)
 
 Summary: A low-level software library for pixel manipulation.
 
@@ -213,5 +213,6 @@ Feedstock Maintainers
 * [@ccordoba12](https://github.com/ccordoba12/)
 * [@jakirkham](https://github.com/jakirkham/)
 * [@ocefpaf](https://github.com/ocefpaf/)
+* [@pkgw](https://github.com/pkgw/)
 * [@sdvillal](https://github.com/sdvillal/)
 
