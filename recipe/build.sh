@@ -9,6 +9,9 @@ fi
 if [ "${target_platform}" == linux-ppc64le ]; then
   OPTS="--disable-vmx "
 fi
+if [ "${target_platform}" == osx-arm64 ]; then
+  OPTS="$OPTS --disable-arm-a64-neon"
+fi
 
 export CFLAGS="-fPIC ${CFLAGS}"
 
