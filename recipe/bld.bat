@@ -4,7 +4,6 @@
 set "LIBRARY_PREFIX_M=%LIBRARY_PREFIX:\=/%"
 
 %BUILD_PREFIX%\Scripts\meson setup builddir ^
-  %MESON_ARGS% ^
   --buildtype=release ^
   --default-library=both ^
   --prefix=%LIBRARY_PREFIX_M% ^

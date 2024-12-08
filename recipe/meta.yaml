@@ -1,4 +1,4 @@
-{% set version = "0.43.4" %}
+{% set version = "0.44.2" %}
 
 package:
   name: pixman
@@ -6,7 +6,7 @@ package:
 
 source:
   url: http://cairographics.org/releases/pixman-{{ version }}.tar.gz
-  sha256: a0624db90180c7ddb79fc7a9151093dc37c646d8c38d3f232f767cf64b85a226
+  sha256: 6349061ce1a338ab6952b92194d1b0377472244208d47ff25bef86fc71973466
   patches:
     - meson-darwin-versions.patch
 
@@ -20,6 +20,7 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}
+    - {{ stdlib("c") }}
     - {{ compiler('cxx') }}
     - meson
     - ninja
