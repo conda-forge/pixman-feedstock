@@ -14,7 +14,6 @@ Development: https://cgit.freedesktop.org/pixman/
 Pixman is a low-level software library for pixel manipulation, providing
 features such as image compositing and trapezoid rasterization.
 
-
 Current build status
 ====================
 
