@@ -1,12 +1,8 @@
 @ECHO ON
 
-:: get the prefix in "mixed" form
-set "LIBRARY_PREFIX_M=%LIBRARY_PREFIX:\=/%"
-
 %BUILD_PREFIX%\Scripts\meson setup builddir ^
-  --buildtype=release ^
-  --default-library=both ^
-  --prefix=%LIBRARY_PREFIX_M% ^
+  %MESON_ARGS% ^
+  --default-library=shared ^
   --wrap-mode=nofallback ^
   --backend=ninja
 if errorlevel 1 exit 1

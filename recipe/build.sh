@@ -19,7 +19,7 @@ fi
 meson setup builddir \
     ${MESON_ARGS} \
     "${meson_config_args[@]}" \
-    --default-library=both \
+    --default-library=shared \
     --wrap-mode=nofallback
 ninja -v -C builddir -j ${CPU_COUNT}
 ninja -C builddir install -j ${CPU_COUNT}

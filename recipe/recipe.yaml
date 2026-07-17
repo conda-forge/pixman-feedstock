@@ -14,7 +14,7 @@ source:
     - meson-darwin-versions.patch
 
 build:
-  number: 1
+  number: 2
 
 requirements:
   build:
@@ -28,9 +28,16 @@ requirements:
     - ${{ pin_subpackage('pixman') }}
 
 tests:
-  - script:
-      - if: not win
-        then: test -f ${PREFIX}/lib/libpixman-1.a
+  - package_contents:
+      lib:
+        - if: not win
+          then: pixman-1
+      files:
+        - if: win
+          then:
+            # meson suffixes the dll with the soversion: pixman-1-0.dll
+            - Library/bin/pixman-1-*.dll
+            - Library/lib/pixman-1.lib
 
 about:
   license: MIT
