@@ -14,7 +14,7 @@ source:
     - meson-darwin-versions.patch
 
 build:
-  number: 2
+  number: 3
 
 requirements:
   build:
